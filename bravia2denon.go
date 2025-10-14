@@ -206,13 +206,13 @@ func main() {
 		powerStatus, err := getSonyPowerStatus()
 		if err != nil {
 			fmt.Println("Error checking TV power:", err)
-			time.Sleep(10 * time.Second)
+			time.Sleep(5 * time.Second)
 			continue
 		}
 
 		if !powerStatus {
 			fmt.Println("TV is not ON.")
-			time.Sleep(10 * time.Second)
+			time.Sleep(5 * time.Second)
 			continue
 		}
 
@@ -220,7 +220,7 @@ func main() {
 		volume, err := getTVVolume()
 		if err != nil {
 			fmt.Println("Error getting TV volume:", err)
-			time.Sleep(10 * time.Second)
+			time.Sleep(5 * time.Second)
 			continue
 		}
 		fmt.Printf("Bravia TV volume is %d\n", volume)
