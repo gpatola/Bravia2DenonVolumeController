@@ -229,7 +229,7 @@ func main() {
 		denonStatus, err := sendDenonCommand("PW?")
 		if err != nil {
 			fmt.Println("Error checking Denon status:", err)
-			return
+			continue
 		}
 		if denonStatus != "PWON" {
 			fmt.Println("Denon is OFF.")
